@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.active{
+    color: #eeb912;
+    font-weight: bold;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.contenedor{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.fondo{
+    background-image: url("../public/pokemonfondo.jpg");
+    background-size: cover;
+    object-fit: cover;
+   
+    background-repeat: no-repeat;
+}
+.texto-borde {
+    -webkit-text-stroke: 2px #2b4492 ;
+    color:  #eeb912 ; 
+    font-family: 'Pokemon Solid';
   }
+
+
+h1{
+    margin-bottom: 400px;
+    margin-right: 600px;
+    animation-duration: 3s;
+    animation-name: slidein;
+    
+}
+.fondoCarta{
+    min-height: 100vh;
+    background-color: #2b4492;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+section{
+    overflow: hidden;
+}
+ 
+
+@keyframes slidein {
+    from {
+      margin-top: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-right: 0%;
+      width:80%;
+    }
+    
+}
+.tamañoImg{
+    width: 150px;
+    display: block ;
 }
 
-.App-link {
-  color: #61dafb;
+.centrar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: #eeb912;
 }
+  
+.banner_img{
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    background-image: url('../public/pokebolaOpen.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+   
+}
+.imgPokebola{
+    background-image: url('../public/pokebola.png');
+    background-repeat: no-repeat;
+    background-position: 50%;
+        
+   
+  
 }
