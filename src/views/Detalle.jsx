@@ -1,24 +1,24 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PokeCard from "../components/PokeCard";
+
 
 
 export default function Detalle(){
     const url='https://pokeapi.co/api/v2/pokemon/';
     const { nombre } = useParams();
-
+    const navigate = useNavigate();
     const [pokemon,setPokemon] = useState({});
     
     useEffect(()=>{
         obtenerPokemon(nombre);
     },[nombre]);
-    
- 
-
+   
     const obtenerPokemon = async (nombre) =>{
+        console.log(nombre);
         const res = await fetch(url + nombre)
         if (res.status !== 200){
-
+            navigate(`/NotFound/`)
             console.log('Error');
         }else{
             const data = await res.json();
@@ -33,7 +33,6 @@ export default function Detalle(){
             };
             
             setPokemon(objetoPokemon)
-            console.log(objetoPokemon)
         }
         
     };
@@ -43,7 +42,7 @@ export default function Detalle(){
             {   
                 
                 (!pokemon.name)?
-                <img src='../pokeups.jpg'/>:
+                <p>no hay valor</p>:
                 <PokeCard pokemon={pokemon} setPokemon={setPokemon}/>
              
             }

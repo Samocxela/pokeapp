@@ -66,19 +66,16 @@ section{
     flex-direction: column;
     background-color: #eeb912;
 }
-  
-.banner_img{
 
-    background-image: url('../public/pokebolaOpen.png');
+.banner_img{
     background-repeat: no-repeat;
     background-position: 50%;
-   
 }
-.imgPokebola{
+
+.imgPokebolaOpen{
+    background-image: url('../public/pokebolaOpen.png');
+}
+.imgPokebola {
     background-image: url('../public/pokebola.png');
-    background-repeat: no-repeat;
-    background-position: 50%;
-        
    
-  
 }

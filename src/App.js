@@ -16,6 +16,7 @@ function App() {
           <Route exact path="/Home" element={<Home />} />
           <Route exact path="/pokemones" element={<Pokemones />} />
           <Route exact path="/pokemones/:nombre" element={<Detalle />} />
+          <Route path="/NotFound" element={<NotFound/>} />
           <Route path="*" element={<NotFound />} />
           
         </Routes>     
